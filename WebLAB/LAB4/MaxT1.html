@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Біжучий текст</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .marquee-container {
+            width: 80%; 
+            height: 60px;
+            background-color: #ffcccb;
+            overflow: hidden;
+            position: relative;
+            margin: 30px auto;
+            border-radius: 10px;
+        }
+        .marquee-text {
+            color: #00008b; 
+            font-size: 26px; 
+            position: absolute;
+            white-space: nowrap;
+            line-height: 60px; /* Выравнивание текста по вертикали */
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            0% {
+                left: 100%;
+            }
+            100% {
+                left: -100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-container">
+        <div class="marquee-text">Це приклад тексту, що біжить по екрану</div>
+    </div>
+</body>
+</html>

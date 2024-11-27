@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вертикально рухаючі тексти та зображення</title>
+    <meta name="description" content="HTML-лабораторна робота з анімаціями в вертикальному напрямку">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100vh;
+            background-color: #f0f8ff;
+        }
+
+        .row {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .text {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 22px;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+
+        .img1 {
+            background-color: #ffebcd; /* Бежевий фон */
+            animation: moveUp 3s ease-in-out infinite;
+        }
+
+        .img2 {
+            background-color: #b0e0e6; /* Блакитний фон */
+            animation: moveDown 4s ease-out infinite;
+        }
+
+        .img3 {
+            background-color: #98fb98; /* Світло-зелений фон */
+            animation: bounce 6s infinite alternate;
+        }
+
+        .img4 {
+            background-color: #fffacd; /* Світло-жовтий фон */
+            animation: slowUpDown 7s infinite alternate;
+        }
+
+        .img5 {
+            background-color: #d3d3d3; /* Світло-сірий фон */
+            animation: staggeredMove 8s infinite;
+        }
+
+        @keyframes moveUp {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes moveDown {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-50%); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes slowUpDown {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-30%); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes staggeredMove {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-40%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="row img1">
+        <div class="text">М’яке коливання тексту</div>
+    </div>
+    <div class="row img2">
+        <div class="text">Зображення, що рухається вгору</div>
+    </div>
+    <div class="row img3">
+        <div class="text">Зображення, що рухається вниз</div>
+    </div>
+    <div class="row img4">
+        <div class="text">Текст з різними варіантами руху</div>
+    </div>
+    <div class="row img5">
+        <div class="text">Запізніле переміщення тексту</div>
+    </div>
+</body>
+</html>

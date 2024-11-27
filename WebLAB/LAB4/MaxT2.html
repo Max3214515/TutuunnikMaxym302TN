@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мобільні тексти, що рухаються</title>
+    <meta name="description" content="Інтерактивні анімації з текстами, що рухаються по екрану">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Легкий фон */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .marquee-wrapper {
+            width: 100%;
+            height: 60px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+        .moving-text {
+            position: absolute;
+            white-space: nowrap;
+            font-size: 22px;
+            padding: 10px;
+        }
+        .pulse {
+            background-color: #e0e0e0;
+            color: #2e8b57;
+            animation: pulseEffect 4s infinite;
+        }
+        @keyframes pulseEffect {
+            0% { left: 0; }
+            50% { left: calc(100% - 220px); }
+            100% { left: 0; }
+        }
+        .from-left-to-right {
+            background-color: #f0e68c;
+            color: #8b0000;
+            animation: slideLeftToRight 8s linear infinite;
+        }
+        @keyframes slideLeftToRight {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        .bounce-stop {
+            background-color: #d3d3d3;
+            color: #00008b;
+            animation: bounceAndStop 6s ease-in-out forwards;
+        }
+        @keyframes bounceAndStop {
+            0% { left: 100%; }
+            50% { left: 50%; }
+            100% { left: 50%; }
+        }
+        .delayed-slide {
+            background-color: #ffcccb;
+            color: #000080;
+            animation: delayedSlideEffect 12s linear infinite;
+        }
+        @keyframes delayedSlideEffect {
+            0% { left: 100%; }
+            100% { left: -100%; }
+        }
+        .slow-move {
+            background-color: #add8e6;
+            color: #00008b;
+            animation: slowMove 16s linear infinite;
+        }
+        @keyframes slowMove {
+            0% { left: 100%; }
+            100% { left: -100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-wrapper">
+        <div class="moving-text pulse">Текст, що коливається зліва направо</div>
+    </div>
+    <div class="marquee-wrapper">
+        <div class="moving-text from-left-to-right">Цей текст рухається зліва направо</div>
+    </div>
+    <div class="marquee-wrapper">
+        <div class="moving-text bounce-stop">Текст, що спочатку рухається, а потім зупиняється</div>
+    </div>
+    <div class="marquee-wrapper">
+        <div class="moving-text delayed-slide">Текст з затримкою перед рухом</div>
+    </div>
+    <div class="marquee-wrapper">
+        <div class="moving-text slow-move">Повільно рухається текст по екрану</div>
+    </div>
+</body>
+</html>
