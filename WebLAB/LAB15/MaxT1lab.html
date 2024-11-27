@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Практичні завдання з JavaScript для навчання основам програмування та роботи з алгоритмами.">
+    <meta name="keywords" content="JavaScript, програмування, цикли, функції, веб-розробка">
+    <title>Завдання з JavaScript</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0073e6;
+        }
+
+        button {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        h2 {
+            color: #444;
+            margin-top: 30px;
+        }
+
+        #result2 {
+            background-color: #e2e2e2;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        // Завдання 1: Вивести всі прості числа від 0 до 100 за допомогою циклу while
+        function findPrimeNumbers() {
+            let primes = [];
+            let num = 2; // Перше просте число
+            while (num <= 100) {
+                let isPrime = true;
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) primes.push(num);
+                num++;
+            }
+            alert("Прості числа від 0 до 100: " + primes.join(", "));
+        }
+
+        // Завдання 2: Вивести числа від 0 до 10 з описом за допомогою циклу do...while
+        function describeNumbers() {
+            let i = 0;
+            let result = '';
+            do {
+                if (i === 0) {
+                    result += `${i} - це нуль<br>`;
+                } else if (i % 2 === 0) {
+                    result += `${i} - парне число<br>`;
+                } else {
+                    result += `${i} - непарне число<br>`;
+                }
+                i++;
+            } while (i <= 10);
+            document.getElementById("result2").innerHTML = result;
+        }
+
+        // Завдання 3: Ділити число на 2, поки результат не стане менше 50
+        function divideUntilLessThan50() {
+            let numb = prompt("Введіть число для ділення:");
+            numb = parseFloat(numb); // Перетворюємо введене значення на число
+            if (isNaN(numb)) {
+                alert("Будь ласка, введіть правильне число.");
+                return; // Виходимо з функції, якщо введене значення не є числом
+            }
+            let counter = 0;
+            let result = numb;
+            while (result >= 50) {
+                result /= 2;
+                counter++;
+            }
+            alert(`Результат ділення: ${result}\nКількість ітерацій: ${counter}`);
+        }
+
+        // Завдання 4: Визначити пору року і назву місяця за допомогою prompt
+        function determineSeason() {
+            let month = parseInt(prompt("Введіть число місяця (від 1 до 12):"));
+            let season, monthName;
+
+            if (month === 12 || month === 1 || month === 2) {
+                season = "Зима";
+            } else if (month >= 3 && month <= 5) {
+                season = "Весна";
+            } else if (month >= 6 && month <= 8) {
+                season = "Літо";
+            } else if (month >= 9 && month <= 11) {
+                season = "Осінь";
+            } else {
+                alert("Невірне число місяця!");
+                return;
+            }
+
+            switch (month) {
+                case 1: monthName = "Січень"; break;
+                case 2: monthName = "Лютий"; break;
+                case 3: monthName = "Березень"; break;
+                case 4: monthName = "Квітень"; break;
+                case 5: monthName = "Травень"; break;
+                case 6: monthName = "Червень"; break;
+                case 7: monthName = "Липень"; break;
+                case 8: monthName = "Серпень"; break;
+                case 9: monthName = "Вересень"; break;
+                case 10: monthName = "Жовтень"; break;
+                case 11: monthName = "Листопад"; break;
+                case 12: monthName = "Грудень"; break;
+            }
+
+            alert(`Місяць: ${monthName}, Пора року: ${season}`);
+        }
+
+        // Завдання 5: Перетворення температури з Цельсія в Фаренгейт
+        function convertTemperature() {
+            let Tc = prompt("Введіть температуру в Цельсіях:");
+            Tc = parseFloat(Tc);
+            let Tf = (9 / 5) * Tc + 32;
+            alert(`Температура в Цельсіях: ${Tc}°C = ${Tf}°F`);
+        }
+
+        // Завдання 6: Вивести день тижня за числом
+        function getDayOfWeek() {
+            let dayNumber = prompt("Введіть число від 1 до 7 для дня тижня:");
+            dayNumber = parseInt(dayNumber);
+
+            // Модифікований масив з понеділком на першому місці
+            let daysOfWeek = ["Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота", "Неділя"];
+
+            if (dayNumber >= 1 && dayNumber <= 7) {
+                alert("Це " + daysOfWeek[dayNumber - 1]);
+            } else {
+                alert("Невірне число, введіть число від 1 до 7.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Завдання з JavaScript</h1>
+    <button onclick="findPrimeNumbers()">1. Вивести прості числа від 0 до 100</button><br><br>
+    <button onclick="describeNumbers()">2. Вивести числа від 0 до 10 з описом</button><br><br>
+    <button onclick="divideUntilLessThan50()">3. Ділити число на 2, поки результат не стане менше 50</button><br><br>
+    <button onclick="determineSeason()">4. Визначити пору року за числом місяця</button><br><br>
+    <button onclick="convertTemperature()">5. Перетворити температуру з Цельсіця в Фаренгейт</button><br><br>
+    <button onclick="getDayOfWeek()">6. Вивести день тижня за числом</button><br><br>
+
+    <h2>Результат завдання 2:</h2>
+    <div id="result2"></div>
+</body>
+
+</html>
