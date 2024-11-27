@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaxT-1: Інтерактивна форма</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e3f2fd;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1565c0;
+            margin-bottom: 30px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            max-width: 700px;
+            margin: auto;
+        }
+
+        input[type="text"],
+        select,
+        textarea,
+        input[type="file"] {
+            width: calc(100% - 20px);
+            padding: 12px 10px;
+            margin: 10px 0;
+            border: 1px solid #bdbdbd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #42a5f5;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-right: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #1e88e5;
+        }
+
+        label {
+            font-weight: 500;
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            form {
+                padding: 15px;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Форма зворотного зв'язку</h2>
+    <form action="response.html" method="get">
+        <div class="form-group">
+            <label for="name">Ваше ім'я:</label>
+            <input id="name" name="name" type="text" maxlength="40" placeholder="Введіть ваше ім'я" required>
+        </div>
+
+        <div class="form-group">
+            <label>Ваша стать:</label>
+            <label><input type="radio" name="pol" value="male"> Чоловіча</label>
+            <label><input type="radio" name="pol" value="female"> Жіноча</label>
+            <label><input type="radio" name="pol" value="other"> Інша</label>
+        </div>
+
+        <div class="form-group">
+            <label for="curs">На якому курсі Ви навчаєтесь?</label>
+            <select id="curs" name="curs" required>
+                <option value="1">Перший</option>
+                <option value="2">Другий</option>
+                <option value="3">Третій</option>
+                <option value="4">Четвертий</option>
+                <option value="5">П'ятий</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Які дисципліни ви вивчаєте на курсі?</label>
+            <label><input type="checkbox" name="web" value="yes"> WEB-програмування</label>
+            <label><input type="checkbox" name="database" value="yes"> Бази даних</label>
+            <label><input type="checkbox" name="intelligence" value="yes"> Методи та системи штучного інтелекту</label>
+            <label><input type="checkbox" name="theory" value="yes"> Теорія прийняття рішень</label>
+        </div>
+
+        <div class="form-group">
+            <label for="about">Напишіть декілька слів про себе:</label>
+            <textarea id="about" name="about" rows="6" placeholder="Розкажіть трохи про себе..." required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="friend">Завантажте файл:</label>
+            <input type="file" id="friend" name="friend" accept=".txt,.doc,.docx,.pdf">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Відіслати">
+            <input type="reset" value="Очистити">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма для лабораторної роботи №7</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #ffffff);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 10px;
+            color: #004d99;
+            font-size: 1.8em;
+            text-transform: uppercase;
+        }
+
+        p {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        form {
+            background: #ffffff;
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: inline-block;
+            color: #222;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="color"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background: #0073e6;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: #005bb5;
+        }
+
+        input[type="reset"] {
+            background: #666;
+        }
+
+        input[type="reset"]:hover {
+            background: #444;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            form {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Лабораторна робота №7</h2>
+    <p>Заповніть форму для виконання завдання.</p>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="name">Ваше ім'я:</label>
+            <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Ваш вік:</label>
+            <input type="number" id="age" name="age" min="1" max="120" required>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Дата народження:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="color">Ваш улюблений колір:</label>
+            <input type="color" id="color" name="color">
+        </div>
+
+        <div class="form-group">
+            <label>Ваш улюблений вид спорту:</label>
+            <input type="radio" id="football" name="sport" value="football">
+            <label for="football">Футбол</label>
+            <input type="radio" id="basketball" name="sport" value="basketball">
+            <label for="basketball">Баскетбол</label>
+            <input type="radio" id="tennis" name="sport" value="tennis">
+            <label for="tennis">Теніс</label>
+        </div>
+
+        <div class="form-group">
+            <label for="hobbies">Ваші хобі:</label>
+            <input type="checkbox" id="reading" name="hobbies" value="reading">
+            <label for="reading">Читання</label>
+            <input type="checkbox" id="traveling" name="hobbies" value="traveling">
+            <label for="traveling">Подорожі</label>
+            <input type="checkbox" id="cooking" name="hobbies" value="cooking">
+            <label for="cooking">Кулінарія</label>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Оберіть країну:</label>
+            <select id="country" name="country" required>
+                <option value="ukraine">Україна</option>
+                <option value="poland">Польща</option>
+                <option value="germany">Німеччина</option>
+                <option value="usa">США</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Ваші коментарі:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Введіть ваші коментарі"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="file">Завантажте файл:</label>
+            <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png, .pdf">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Відправити">
+            <input type="reset" value="Очистити">
+        </div>
+    </form>
+</body>
+</html>
