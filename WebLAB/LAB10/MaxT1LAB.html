@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивна сторінка сітки</title>
+    <style>
+        /* Глобальні стилі */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .item {
+            border: 2px solid #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (min-width: 1200px) {
+            .item:nth-child(1) {
+                background-color: #5a9bd6;
+                grid-column: span 3;
+            }
+
+            .item:nth-child(2) {
+                background-color: #6e797f;
+                grid-column: span 1;
+                grid-row: span 3;
+            }
+
+            .item:nth-child(3) {
+                background-color: #5bcdd6;
+            }
+
+            .item:nth-child(4) {
+                background-color: #e65f65;
+            }
+
+            .item:nth-child(5) {
+                background-color: #fdb62f;
+                grid-column: span 1;
+                grid-row: span 2;
+            }
+
+            .item:nth-child(6) {
+                background-color: #4fa976;
+                grid-column: span 2;
+            }
+
+            .item:nth-child(7) {
+                background-color: #d9732f;
+                grid-column: span 4;
+            }
+        }
+
+        @media screen and (min-width: 950px) and (max-width: 1199px) {
+            .item:nth-child(1) {
+                background-color: #5a9bd6;
+                grid-column: span 3;
+            }
+
+            .item:nth-child(2) {
+                background-color: #6e797f;
+                grid-column: span 1;
+                grid-row: span 4;
+            }
+
+            .item:nth-child(3) {
+                background-color: #5bcdd6;
+            }
+
+            .item:nth-child(4) {
+                background-color: #e65f65;
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+
+            .item:nth-child(5) {
+                background-color: #fdb62f;
+                grid-column: span 1;
+                grid-row: span 2;
+            }
+
+            .item:nth-child(6) {
+                background-color: #4fa976;
+                grid-column: span 2;
+            }
+
+            .item:nth-child(7) {
+                background-color: #d9732f;
+                grid-column: span 4;
+            }
+        }
+
+        @media screen and (min-width: 750px) and (max-width: 949px) {
+            .item:nth-child(1) {
+                background-color: #5a9bd6;
+                grid-column: span 4;
+            }
+
+            .item:nth-child(2) {
+                background-color: #6e797f;
+                grid-column: span 4;
+                grid-row: span 2;
+            }
+
+            .item:nth-child(3) {
+                background-color: #5bcdd6;
+            }
+
+            .item:nth-child(4) {
+                background-color: #e65f65;
+            }
+
+            .item:nth-child(5) {
+                background-color: #fdb62f;
+            }
+
+            .item:nth-child(6) {
+                background-color: #4fa976;
+            }
+
+            .item:nth-child(7) {
+                background-color: #d9732f;
+                grid-column: span 4;
+            }
+        }
+
+        @media screen and (max-width: 749px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .item {
+                font-size: 18px;
+                padding: 20px 0;
+            }
+
+            .item:nth-child(1) { background-color: #5a9bd6; }
+            .item:nth-child(2) { background-color: #6e797f; }
+            .item:nth-child(3) { background-color: #5bcdd6; }
+            .item:nth-child(4) { background-color: #e65f65; }
+            .item:nth-child(5) { background-color: #fdb62f; }
+            .item:nth-child(6) { background-color: #4fa976; }
+            .item:nth-child(7) { background-color: #d9732f; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+</body>
+</html>
