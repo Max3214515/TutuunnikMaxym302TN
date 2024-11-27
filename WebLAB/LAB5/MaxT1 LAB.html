@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розклад занять для студентів</title>
+    <style>
+        body {
+            background-color: #FAFAD2;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FF4500;
+            font-size: 3rem;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        td, th {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #FF6347;
+            color: white;
+        }
+
+        td {
+            background-color: #FFF0F5;
+        }
+
+        .day-name {
+            background-color: #FFDEAD;
+            color: #8B0000;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .schedule {
+            font-size: 1.1rem;
+            font-family: 'Courier New', monospace;
+            color: #000080;
+        }
+
+        .class-time {
+            color: #32CD32;
+        }
+
+        .location {
+            color: #8B4513;
+        }
+    </style>
+</head>
+<body>
+    <h1>Розклад занять для студентів</h1>
+
+    <table>
+        <tr>
+            <th><a href="#Monday">Понеділок</a></th>
+            <th>Вівторок</th>
+            <th>Середа</th>
+            <th>Четвер</th>
+            <th>П'ятниця</th>
+        </tr>
+    </table>
+
+    <table>
+        <caption><strong style="color:#FF6347; font-size: 2rem;">Розклад занять групи</strong></caption>
+        <tr>
+            <td class="day-name"><a name="Monday"></a>Понеділок</td>
+            <td class="schedule">
+                <div>2️⃣ <span class="class-time">10:00-11:20</span> - Веб-програмування та веб-дизайн, Здоренко Ю.М., <span class="location">308Ц (Lab)</span></div>
+                <div>4️⃣ <span class="class-time">13:30-14:50</span> - Hydraulic machines and compressors, Криворот А.І., <span class="location">03аЛ (Lec)</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="day-name">Вівторок</td>
+            <td class="schedule">
+                <div>2️⃣ <span class="class-time">10:00-11:20</span> - Основи 3d-друку та моделювання, Конюк А.Є., <span class="location">300П (Prac)</span></div>
+                <div>4️⃣ <span class="class-time">13:30-14:50</span> - Основи 3d-друку та моделювання, Конюк А.Є., <span class="location">300П (Prac)</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="day-name">Середа</td>
+            <td class="schedule">
+                <div>1️⃣ <span class="class-time">08:30-09:50</span> - Бази даних, Коваль О.О., <span class="location">LENOVO (Lab)</span></div>
+                <div>2️⃣ <span class="class-time">10:00-11:20</span> - Бази даних, Коваль О.О., <span class="location">LENOVO (Lab)</span></div>
+                <div>3️⃣ <span class="class-time">11:30-12:50</span> - Бази даних, Коваль О.О., <span class="location">204А (Lec)</span></div>
+                <div>4️⃣ <span class="class-time">13:30-14:50</span> - Foreign language (by professional direction), Король Т.Г., <span class="location">116Ц (Prac)</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="day-name">Четвер</td>
+            <td class="schedule">
+                <div>2️⃣ <span class="class-time">10:00-11:20</span> - Веб-програмування та веб-дизайн, Здоренко Ю.М., <span class="location">204А (Lec)</span></div>
+                <div>3️⃣ <span class="class-time">11:30-12:50</span> - Методи та системи штучного інтелекту, Бублій В.Е., <span class="location">ASUS 1 (Lab)</span></div>
+                <div>4️⃣ <span class="class-time">13:30-14:50</span> - Методи та системи штучного інтелекту, Альошин С.П., <span class="location">204А (Lec)</span></div>
+                <div>5️⃣ <span class="class-time">15:00-16:20</span> - Теорія прийняття рішень, Бублій В.Е., <span class="location">206Л (Lab)</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="day-name">П'ятниця</td>
+            <td class="schedule">
+                <div>2️⃣ <span class="class-time">10:00-11:20</span> - Теорія прийняття рішень, Альошин С.П., <span class="location">219Ф (Lec)</span></div>
+                <div>3️⃣ <span class="class-time">11:30-12:50</span> - Теорія прийняття рішень, Альошин С.П., <span class="location">219Ф (Lec)</span></div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
