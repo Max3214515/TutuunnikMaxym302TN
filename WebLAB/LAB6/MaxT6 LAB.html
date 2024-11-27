@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Одногрупники</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            color: #0277bd;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .image-container {
+            position: relative;
+            text-align: center;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            max-width: 90%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .friend-info {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            padding: 8px;
+            border-radius: 5px;
+            z-index: 10;
+            max-width: 200px;
+            font-size: 0.9rem;
+        }
+
+        area:hover + .friend-info {
+            display: block;
+        }
+
+        area {
+            outline: none;
+        }
+
+        .friend-info::before {
+            content: 'Інформація: ';
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Мої одногрупники</h1>
+    <div class="image-container">
+        <img src="group-photo.jpg" alt="Фото групи" usemap="#friendsMap">
+
+        <map name="friendsMap">
+            <area shape="rect" coords="350,600,0,130" alt="Перша особа" title="Лєра" href="#" class="friend-area">
+            <div class="friend-info" style="top: 100px; left: 20px;">Лєра - студента групи, обожнює спорт.</div>
+
+            <area shape="rect" coords="485,350,410,256" alt="Друга особа" title="Максим" href="#" class="friend-area">
+            <div class="friend-info" style="top: 250px; left: 100px;">Максим - програміст, захоплюється кіно.</div>
+
+            <area shape="rect" coords="610,413,540,354" alt="Третя особа" title="Вадим" href="#" class="friend-area">
+            <div class="friend-info" style="top: 300px; left: 150px;">Вадим - геймер, улюблений стиль гри - стратегія.</div>
+
+            <area shape="rect" coords="663,640,500,420" alt="Четверта особа" title="Даша" href="#" class="friend-area">
+            <div class="friend-info" style="top: 400px; left: 180px;">Даша - займається дизайном, обожнює мистецтво.</div>
+
+            <area shape="rect" coords="692,372,633,300" alt="П'ята особа" title="Максим" href="#" class="friend-area">
+            <div class="friend-info" style="top: 350px; left: 230px;">Максим - активіст, учасник університетських проектів.</div>
+
+            <area shape="rect" coords="775,400,705,315" alt="Шоста особа" title="Даня" href="#" class="friend-area">
+            <div class="friend-info" style="top: 380px; left: 270px;">Даня - захоплюється наукою, хоче стати інженером.</div>
+
+            <area shape="rect" coords="945,431,840,294" alt="Сьома особа" title="Я (Макс)" href="#" class="friend-area">
+            <div class="friend-info" style="top: 250px; left: 320px;">Я - ентузіаст програмування, працюю над кількома проектами.</div>
+
+            <area shape="rect" coords="1071,400,970,277" alt="Восьма особа" title="Нікіта" href="#" class="friend-area">
+            <div class="friend-info" style="top: 200px; left: 370px;">Нікіта - мандрівник, прагне побачити весь світ.</div>
+
+            <area shape="rect" coords="1278,505,1090,306" alt="Дев'ята особа" title="Таня" href="#" class="friend-area">
+            <div class="friend-info" style="top: 180px; left: 450px;">Таня - цікавиться психологією та розвитком особистості.</div>
+
+            <area shape="rect" coords="484,475,407,374" alt="Десята особа" title="Даня" href="#" class="friend-area">
+            <div class="friend-info" style="top: 150px; left: 500px;">Даня - музикант, любить створювати музику у вільний час.</div>
+
+            <area shape="rect" coords="1148,821,896,535" alt="Одинадцята особа" title="Настя" href="#" class="friend-area">
+            <div class="friend-info" style="top: 550px; left: 550px;">Настя - майбутній юрист, активно бере участь у студентському житті.</div>
+        </map>
+    </div>
+</body>
+</html>

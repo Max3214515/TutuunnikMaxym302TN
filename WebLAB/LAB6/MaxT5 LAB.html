@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сенсорне зображення</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+        }
+        h1 {
+            text-align: center;
+            color: #0277bd;
+            margin-top: 20px;
+        }
+        .map {
+            position: relative;
+            display: inline-block;
+            max-width: 100%;
+        }
+        .area {
+            position: absolute;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.2s ease;
+        }
+        .area:hover {
+            transform: scale(1.05);
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: opacity 0.2s ease;
+        }
+        .area:hover .tooltip {
+            display: block;
+            opacity: 1;
+        }
+        .area:focus-within .tooltip {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Сенсорна карта</h1>
+<div class="map">
+    <img src="shapes2.png" alt="Сенсорне зображення" usemap="#image-map">   
+    <!-- Область 1 -->
+    <div class="area" style="top: 80px; left: 20px; width: 120px; height: 100px;">
+        <div class="tooltip">Це область 1</div>
+    </div>
+
+    <!-- Область 2 -->
+    <div class="area" style="top: 120px; left: 180px; width: 120px; height: 120px;">
+        <div class="tooltip">Це область 2</div>
+    </div>
+
+    <!-- Область 3 -->
+    <div class="area" style="top: 80px; left: 400px; width: 120px; height: 100px;">
+        <div class="tooltip">Це область 3</div>
+    </div>
+</div>
+
+</body>
+</html>

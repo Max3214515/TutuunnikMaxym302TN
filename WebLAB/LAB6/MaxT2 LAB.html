@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сенсорні зображення з спливаючими заголовками для покращеного користувацького досвіду.">
+    <title>Використання сенсорних зображень</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #0288d1;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            display: inline-block;
+            border: 5px solid #0288d1;
+            margin-top: 30px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border: 0;
+        }
+
+        area {
+            outline: none;
+        }
+
+        area:hover {
+            cursor: pointer;
+            border: 2px solid #ff9800;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 10px;
+            background-color: #0288d1;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Використання сенсорних зображень</h1>
+
+    <!-- Створюємо карту із спливаючими заголовками -->
+    <div class="image-container">
+        <map name="interactive-map">
+            <area shape="rect" coords="0,0,300,50" href="#" alt="Блакитне небо" title="Блакитне небо">
+            <area shape="poly" coords="120,180,210,180,150,150" href="#" alt="Човен" title="Човен">
+            <area shape="poly" coords="0,20,50,20,30,140,0,120,0,20" href="#" alt="Скеля" title="Скеля">
+            <area shape="circle" coords="50,235,25" href="#" alt="Камінь" title="Камінь">
+        </map>
+
+        <!-- Застосовуємо карту до малюнка -->
+        <img src="vodopad.jpg" alt="Природний пейзаж із водоспадом" width="600" height="500" usemap="#interactive-map">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ваш веб-сайт | <a href="mailto:contact@yourwebsite.com" style="color: white; text-decoration: none;">Зв'язатися з нами</a></p>
+    </footer>
+
+</body>
+</html>
