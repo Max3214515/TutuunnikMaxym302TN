@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демонстрація форматування</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, #f7faff, #e0f7fa);
+            color: #333;
+        }
+        h1, h2 {
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        h1 {
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #004d40;
+            margin-top: 30px;
+        }
+        p {
+            margin: 15px 0;
+            font-size: 16px;
+        }
+        .bold {
+            font-weight: 700;
+            color: #d32f2f;
+        }
+        .italic {
+            font-style: italic;
+            color: #00796b;
+        }
+        .highlight {
+            background: #ffeb3b;
+            color: #333;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        ul {
+            list-style-type: circle;
+            margin: 20px auto;
+            padding: 0;
+            max-width: 600px;
+        }
+        ul li {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li::marker {
+            color: #004d40;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Приклад Стилізованого Контенту</h1>
+        <p>Цей документ демонструє використання стилів для тексту. Наприклад, тут є <span class="bold">жирний текст</span>, який привертає увагу, а також <span class="italic">курсивний текст</span>, що надає елегантності.</p>
+
+        <h2>Виділення важливого тексту</h2>
+        <p class="highlight">Цей текст виділено яскравим фоном, щоб підкреслити його значущість. Використовуйте його для акцентів.</p>
+
+        <h2>Списки</h2>
+        <ul>
+            <li>Це перший елемент у списку.</li>
+            <li>Другий пункт може містити більше деталей.</li>
+            <li>А ось і третій пункт для завершення.</li>
+        </ul>
+
+        <h2>Підсумок</h2>
+        <p>Форматування тексту, таке як <span class="bold">жирне виділення</span>, <span class="italic">курсив</span> та використання <span class="highlight">фонового виділення</span>, робить ваш контент більш структурованим і привабливим.</p>
+    </div>
+    <footer>
+        &copy; 2024. Усі права захищено. Приклад для навчання.
+    </footer>
+</body>
+</html>
